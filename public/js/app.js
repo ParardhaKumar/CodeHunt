@@ -196,7 +196,7 @@ checkPropTypes.resetWarningCache = function() {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":3,"_process":17}],3:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":3,"_process":18}],3:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -25260,7 +25260,7 @@ exports.version = ReactVersion;
 }
 
 }).call(this,require('_process'))
-},{"_process":17,"object-assign":1,"prop-types/checkPropTypes":2,"react":9,"scheduler":14,"scheduler/tracing":15}],5:[function(require,module,exports){
+},{"_process":18,"object-assign":1,"prop-types/checkPropTypes":2,"react":9,"scheduler":14,"scheduler/tracing":15}],5:[function(require,module,exports){
 /** @license React v16.13.0
  * react-dom.production.min.js
  *
@@ -25596,7 +25596,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-dom.development.js":4,"./cjs/react-dom.production.min.js":5,"_process":17}],7:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":4,"./cjs/react-dom.production.min.js":5,"_process":18}],7:[function(require,module,exports){
 (function (process){
 /** @license React v16.13.0
  * react.development.js
@@ -27512,7 +27512,7 @@ exports.version = ReactVersion;
 }
 
 }).call(this,require('_process'))
-},{"_process":17,"object-assign":1,"prop-types/checkPropTypes":2}],8:[function(require,module,exports){
+},{"_process":18,"object-assign":1,"prop-types/checkPropTypes":2}],8:[function(require,module,exports){
 /** @license React v16.13.0
  * react.production.min.js
  *
@@ -27550,7 +27550,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":7,"./cjs/react.production.min.js":8,"_process":17}],10:[function(require,module,exports){
+},{"./cjs/react.development.js":7,"./cjs/react.production.min.js":8,"_process":18}],10:[function(require,module,exports){
 (function (process){
 /** @license React v0.19.0
  * scheduler-tracing.development.js
@@ -27903,7 +27903,7 @@ exports.unstable_wrap = unstable_wrap;
 }
 
 }).call(this,require('_process'))
-},{"_process":17}],11:[function(require,module,exports){
+},{"_process":18}],11:[function(require,module,exports){
 /** @license React v0.19.0
  * scheduler-tracing.production.min.js
  *
@@ -28777,7 +28777,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 }
 
 }).call(this,require('_process'))
-},{"_process":17}],13:[function(require,module,exports){
+},{"_process":18}],13:[function(require,module,exports){
 /** @license React v0.19.0
  * scheduler.production.min.js
  *
@@ -28811,7 +28811,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler.development.js":12,"./cjs/scheduler.production.min.js":13,"_process":17}],15:[function(require,module,exports){
+},{"./cjs/scheduler.development.js":12,"./cjs/scheduler.production.min.js":13,"_process":18}],15:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -28822,12 +28822,149 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler-tracing.development.js":10,"./cjs/scheduler-tracing.production.min.js":11,"_process":17}],16:[function(require,module,exports){
+},{"./cjs/scheduler-tracing.development.js":10,"./cjs/scheduler-tracing.production.min.js":11,"_process":18}],16:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var HomePage = /*#__PURE__*/function (_React$Component) {
+  _inherits(HomePage, _React$Component);
+
+  function HomePage() {
+    var _this;
+
+    _classCallCheck(this, HomePage);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(HomePage).call(this));
+    _this.state = {
+      productList: [{
+        id: 1,
+        name: 'Code Academy',
+        link: 'https://codeacademy.com',
+        media: '/img/codecademy.jpeg',
+        upvote: 169,
+        description: 'Coding Website',
+        author: {
+          name: 'Parardha',
+          avatar: '/img/hieu.jpeg'
+        }
+      }, {
+        id: 2,
+        name: 'Code For Startup',
+        link: 'https://codeforstartup.com',
+        media: '/img/code4startup.jpeg',
+        upvote: 81,
+        description: 'Another Coding Website',
+        author: {
+          name: 'Leo',
+          avatar: '/img/leo.jpeg'
+        }
+      }]
+    };
+    return _this;
+  }
+
+  _createClass(HomePage, [{
+    key: "render",
+    value: function render() {
+      return _react["default"].createElement("section", null, _react["default"].createElement("header", null, _react["default"].createElement("img", {
+        src: "/img/banner.jpeg",
+        width: "100%"
+      })), _react["default"].createElement("section", null, _react["default"].createElement("section", {
+        className: "container"
+      }, _react["default"].createElement("ul", {
+        className: "product-list"
+      }, _react["default"].createElement("li", {
+        className: "product-item"
+      }, _react["default"].createElement("a", {
+        className: "upvote-button",
+        href: "#"
+      }, _react["default"].createElement("span", null, _react["default"].createElement("i", {
+        className: "fas fa-chevron-circle-up"
+      })), _react["default"].createElement("br", null), " ", this.state.productList[0].upvote), _react["default"].createElement("img", {
+        className: "product-list-media",
+        src: this.state.productList[0].media
+      }), _react["default"].createElement("section", {
+        className: "product-list-info"
+      }, _react["default"].createElement("a", {
+        href: "#"
+      }, _react["default"].createElement("h2", null, this.state.productList[0].name)), _react["default"].createElement("p", null, this.state.productList[0].description), _react["default"].createElement("a", {
+        href: "#"
+      }, _react["default"].createElement("img", {
+        className: "small-avatar",
+        src: this.state.productList[0].author.avatar
+      }))), _react["default"].createElement("a", {
+        className: "product-item-link",
+        href: this.state.productList[0].author.avatar
+      }, _react["default"].createElement("span", null, _react["default"].createElement("i", {
+        className: "fas fa-external-link-square-alt"
+      })))), _react["default"].createElement("li", {
+        className: "product-item"
+      }, _react["default"].createElement("a", {
+        className: "upvote-button",
+        href: "#"
+      }, _react["default"].createElement("span", null, _react["default"].createElement("i", {
+        className: "fas fa-chevron-circle-up"
+      })), _react["default"].createElement("br", null), " ", this.state.productList[1].upvote), _react["default"].createElement("img", {
+        className: "product-list-media",
+        src: this.state.productList[1].media
+      }), _react["default"].createElement("section", {
+        className: "product-list-info"
+      }, _react["default"].createElement("a", {
+        href: "#"
+      }, _react["default"].createElement("h2", null, this.state.productList[1].name)), _react["default"].createElement("p", null, this.state.productList[1].description), _react["default"].createElement("a", {
+        href: "#"
+      }, _react["default"].createElement("img", {
+        className: "small-avatar",
+        src: this.state.productList[1].author.avatar
+      }))), _react["default"].createElement("a", {
+        className: "product-item-link",
+        href: this.state.productList[1].author.avatar
+      }, _react["default"].createElement("span", null, _react["default"].createElement("i", {
+        className: "fas fa-external-link-square-alt"
+      }))))))));
+    }
+  }]);
+
+  return HomePage;
+}(_react["default"].Component);
+
+var _default = HomePage;
+exports["default"] = _default;
+
+},{"react":9}],17:[function(require,module,exports){
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _HomePage = _interopRequireDefault(require("./HomePage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -28861,7 +28998,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement("h4", null, "Hello ReactJS");
+      return _react["default"].createElement(_HomePage["default"], null);
     }
   }]);
 
@@ -28870,7 +29007,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
 _reactDom["default"].render(_react["default"].createElement(App, null), document.getElementById('root'));
 
-},{"react":9,"react-dom":6}],17:[function(require,module,exports){
+},{"./HomePage":16,"react":9,"react-dom":6}],18:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -29056,4 +29193,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[16]);
+},{}]},{},[17]);
